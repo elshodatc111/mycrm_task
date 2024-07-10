@@ -167,82 +167,141 @@
     <section class="section dashboard">
 
 
-
       <div class="row mb-2">
         <div class="col-4">
-          <a href="groups.html" class="btn btn-primary w-100">Guruhlar</a>
+          <a href="groups.html" class="btn btn-secondary w-100">Guruhlar</a>
         </div>
         <div class="col-4">
           <a href="groups_end.html" class="btn btn-secondary w-100">Yakunlangan guruhlar</a>
         </div>
         <div class="col-4">
-          <a href="groups_create_one.html" class="btn btn-secondary w-100">Yangi guruh</a>
+          <a href="groups_create_one.html" class="btn btn-primary w-100">Yangi guruh</a>
         </div>
-      </div>
-
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <i class="bi bi-check-circle me-1"></i>
-        Yangi guruh qo'shildi.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title w-100 text-center">Guruhlar</h5>
-
-          <table class="table text-center table-bordered" style="font-size: 12px;">
-            <thead>
-              <tr class="align-items-center">
-                <th>#</th>
-                <th>Guruh</th>
-                <th>Boshlanish vaqti</th>
-                <th>Yakunlanish vaqti</th>
-                <th>Dars xonasi</th>
-                <th>Dars vaqti</th>
-                <th>Talabalar</th>
-                <th>Guruh holati</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Hangil</b></a>
-                </td>
-                <td>10.07.2024</td>
-                <td>10.07.2024</td>
-                <td>1-xona</td>
-                <td>08:00-09:30</td>
-                <td>12</td>
-                <td><p class="text-primary p-0 m-0">Yangi</p></td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Hangil</b></a>
-                </td>
-                <td>10.07.2024</td>
-                <td>10.07.2024</td>
-                <td>1-xona</td>
-                <td>08:00-09:30</td>
-                <td>12</td>
-                <td><b class="text-success p-0 m-0">Aktiv</b></td>
-              </tr>
-            </tbody>
-          </table>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination  pagination-sm justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
+          <h5 class="card-title w-100 text-center mb-0 pb-0">Yangi guruh</h5>
+          <div class="progress my-2">
+            <div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100">95%</div>
+          </div>
+          <form action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <h4 class="card-title w-100 text-center">Yangi guruh haqida</h4>
+                <table class="table table-bordered">
+                    <tr>
+                        <th>Guruh</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Guruh narxi</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Darslar boshlanishi</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Dars yakunlanish</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Hafta kuni</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Dars xonasi</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Kurs</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>O'qituvchi</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>Ish haqi to'lov turi</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>O'qituvchiga foiz</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>O'qituvchiga to'lov</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                    <tr>
+                        <th>O'qituvchiga bonus</th>
+                        <td style="text-align:right">Hangil darslari</td>
+                    </tr>
+                </table>
+              </div>
+              <div class="col-lg-6">
+                <h4 class="card-title w-100 text-center">Dars kunlari</h4>
+                <table class="table table-bordered text-center">
+                    <tr>
+                        <th>1-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>2-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>3-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>4-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>5-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>5-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>5-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>5-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>5-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                    <tr>
+                        <th>5-dars:</th>
+                        <td>10.07.2024</td>
+                    </tr>
+                </table>
+                <label for="">Dars vaqtini tanlang</label>
+                <select name="" required class="form-select mt-2">
+                    <option value="">Tanlang...</option>
+                </select>
+              </div>
+              <div class="col-12 text-center mt-2">
+                <div class="row">
+                    <div class="col-6">
+                        <a href="groups_create_one.html" class="btn btn-secondary w-100">Orqaga</a>
+                    </div>
+                    <div class="col-6">
+                        <button class="btn btn-primary w-100">Guruhni saqlash</button>
+                    </div>
+                </div>
+              </div>
+            </div>
+          </form>
+          
         </div>
       </div>
     </section>
