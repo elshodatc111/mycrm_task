@@ -4,7 +4,7 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>NiceAdmin</title>
+  <title>CrmMarket</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
   <link href="assets/img/logo/logo_icon.png" rel="icon">
@@ -155,86 +155,73 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Eslatmalar</h1>
+      <h1>Tashriflar</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Bosh sahifa</a></li>
-          <li class="breadcrumb-item active">Eslatmalar</li>
+          <li class="breadcrumb-item active">Tashriflar</li>
         </ol>
       </nav>
     </div>
 
     <section class="section dashboard">
       <div class="row mb-2">
-        <div class="col-6">
-          <a href="" class="btn btn-primary w-100">Aktiv Eslatmalar</a>
+        <div class="col-4">
+          <a href="index.html" class="btn btn-secondary w-100">Tashriflar</a>
         </div>
-        <div class="col-6">
-          <a href="" class="btn btn-secondary w-100">Arxiv Eslatmalar</a>
+        <div class="col-4">
+          <a href="index_debit.html" class="btn btn-secondary w-100">Qarzdorlar</a>
         </div>
+        <div class="col-4">
+          <a href="index_create.html" class="btn btn-primary w-100">Yangi tashrif</a>
+        </div>
+      </div>
+
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="bi bi-person-x me-1"></i>
+        Telefon raqam oldin ro'yhatdan o'tgan.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+      </div>
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="bi bi-person-x me-1"></i>
+        Tug'ilgan kuni noto'g'ri kiritildi.
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title w-100 text-center">Aktiv Eslatmalar</h5>
-
-          <table class="table text-center table-bordered" style="font-size: 12px;">
-            <thead>
-              <tr class="align-items-center">
-                <th>#</th>
-                <th>Guruh</th>
-                <th>Boshlanish vaqti</th>
-                <th>Yakunlanish vaqti</th>
-                <th>Talabalar</th>
-                <th>Guruh holati</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Elshod Musurmonov</b></a>
-                </td>
-                <td>99 890 88 55</td>
-                <td>Qarshi shaxar</td>
-                <td>3</td>
-                <td>10.07.2024 15:24:45</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Elshod Musurmonov</b></a>
-                </td>
-                <td>99 890 88 55</td>
-                <td>Qarshi shaxar</td>
-                <td>3</td>
-                <td>10.07.2024 15:24:45</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Elshod Musurmonov</b></a>
-                </td>
-                <td>99 890 88 55</td>
-                <td>Qarshi shaxar</td>
-                <td>3</td>
-                <td>10.07.2024 15:24:45</td>
-              </tr>
-            </tbody>
-          </table>
-          <nav aria-label="Page navigation example">
-            <ul class="pagination  pagination-sm justify-content-center">
-              <li class="page-item disabled">
-                <a class="page-link" href="#" tabindex="-1" aria-disabled="true">Previous</a>
-              </li>
-              <li class="page-item"><a class="page-link" href="#">1</a></li>
-              <li class="page-item"><a class="page-link" href="#">2</a></li>
-              <li class="page-item"><a class="page-link" href="#">3</a></li>
-              <li class="page-item">
-                <a class="page-link" href="#">Next</a>
-              </li>
-            </ul>
-          </nav>
+          <h5 class="card-title w-100 text-center">Yangi tashrif</h5>
+          <form action="" method="post">
+            <div class="row">
+              <div class="col-lg-6">
+                <label for="" class="mb-1">FIO</label>
+                <input type="text" required class="form-control">
+                <label for="" class="mb-1 mt-1">Telefon raqam</label>
+                <input type="text" required class="form-control">
+                <label for="" class="mb-1 mt-1">Qo'shimcha telefon raqam</label>
+                <input type="text" required class="form-control">
+                <label for="" class="mb-1 mt-1">Yashash manzili</label>
+                <select name="" required class="form-select">
+                  <option value="">Tablang...</option>
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="col-lg-6">
+                <label for="" class="mt-1 mt-lg-0 mb-1">Talaba tug'ilgan kuni</label>
+                <input type="text" required class="form-control">
+                <label for="" class="mb-1 mt-1">Talaba haqida</label>
+                <textarea name="" rows="4" required class="form-control"></textarea>
+                <label for="" class="mb-1 mt-1">Biz haqimizda</label>
+                <select name="" required class="form-select">
+                  <option value="">Tablang...</option>
+                  <option value=""></option>
+                </select>
+              </div>
+              <div class="col-12 text-center mt-2">
+                <button type="submit" class="btn btn-primary w-50">Tashrifni saqlash</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>

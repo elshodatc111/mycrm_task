@@ -4,11 +4,11 @@
 <head>
   <meta charset="utf-8">
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
-  <title>NiceAdmin</title>
+  <title>CrmMarket</title>
   <meta content="" name="description">
   <meta content="" name="keywords">
-  <link href="assets/img/favicon.png" rel="icon">
-  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+  <link href="assets/img/logo/logo_icon.png" rel="icon">
+  <link href="assets/img/logo/logo_icon.png" rel="apple-touch-icon">
   <link href="https://fonts.gstatic.com" rel="preconnect">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -27,8 +27,8 @@
     <div class="d-flex align-items-center justify-content-between">
       <a href="index.html" class="logo d-flex align-items-center">
         <span class=" w-100 text-center">
-          <img src="assets/img/logo.png" alt="">
-          <span class="d-none d-lg-block"> MyCrm</span>
+          <img src="assets/img/logo/logo.png" class="d-none d-lg-block" style="margin:0 auto">
+          <img src="assets/img/logo/logo_icon.png" class="d-lg-none d-block">
         </span>
       </a>
       <i class="bi bi-list toggle-sidebar-btn"></i>
@@ -55,13 +55,13 @@
         </li>
         <li class="nav-item">
           <a class="nav-link nav-icon" href="#" title="Form">
-            <i class="bi bi-basket3"></i>
+            <i class="bi bi-card-checklist"></i>
             <span class="badge bg-warning badge-number">3</span>
           </a>
         </li>
         <li class="nav-item dropdown pe-3">
           <a class="nav-link nav-profile d-flex align-items-center pe-0" href="#" data-bs-toggle="dropdown">
-            <img src="assets/img/profile-img.jpg" alt="Profile" class="rounded-circle">
+            <img src="assets/img/logo/user.png" alt="Profile" class="rounded-circle">
             <span class="d-none d-md-block dropdown-toggle ps-2">Meneger</span>
           </a>
           <ul class="dropdown-menu dropdown-menu-end dropdown-menu-arrow profile">
@@ -97,55 +97,55 @@
     <ul class="sidebar-nav" id="sidebar-nav">
       <li class="nav-item">
         <a class="nav-link collapsed" href="index.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-people"></i>
           <span>Tashriflar</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="groups.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-diagram-3"></i>
           <span>Guruhlar</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="note.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-bell"></i>
           <span>Eslatmalar</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="moliya.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-collection"></i>
           <span>Moliya</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="hodimlar.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-person-check"></i>
           <span>Hodimlar</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="hodimlar.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-pie-chart"></i>
           <span>Statistika</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="balans.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-coin"></i>
           <span>Balans</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="hodimlar.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-files-alt"></i>
           <span>Hisobot</span>
         </a>
       </li>
       <li class="nav-item">
         <a class="nav-link collapsed" href="hodimlar.html">
-          <i class="bi bi-grid"></i>
+          <i class="bi bi-gear"></i>
           <span>Sozlamalar</span>
         </a>
       </li>
@@ -166,22 +166,24 @@
 
     <section class="section dashboard">
 
+
+
+      <div class="row mb-2">
+        <div class="col-4">
+          <a href="index.html" class="btn btn-primary w-100">Tashriflar</a>
+        </div>
+        <div class="col-4">
+          <a href="index_debit.html" class="btn btn-secondary w-100">Qarzdorlar</a>
+        </div>
+        <div class="col-4">
+          <a href="index_create.html" class="btn btn-secondary w-100">Yangi tashrif</a>
+        </div>
+      </div>
+
       <div class="alert alert-success alert-dismissible fade show" role="alert">
         <i class="bi bi-check-circle me-1"></i>
         Yangi talalaba qo'shildi.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-
-      <div class="row mb-2">
-        <div class="col-4">
-          <a href="" class="btn btn-primary w-100">Tashriflar</a>
-        </div>
-        <div class="col-4">
-          <a href="" class="btn btn-secondary w-100">Qarzdorlar</a>
-        </div>
-        <div class="col-4">
-          <a href="" class="btn btn-secondary w-100">Yangi tashrif</a>
-        </div>
       </div>
 
       <div class="card">
