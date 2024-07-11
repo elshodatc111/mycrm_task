@@ -155,11 +155,12 @@
   <main id="main" class="main">
 
     <div class="pagetitle">
-      <h1>Tashrif</h1>
+      <h1>Guruh</h1>
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Bosh sahifa</a></li>
-          <li class="breadcrumb-item active">Tashrif</li>
+          <li class="breadcrumb-item"><a href="groups.html">Guruhlar</a></li>
+          <li class="breadcrumb-item active">Guruh</li>
         </ol>
       </nav>
     </div>
@@ -174,27 +175,27 @@
 
       <div class="card" style="min-height: 280px;">
         <div class="card-body">
-      <div class="row">
-        <div class="col-lg-6">      
-              <h5 class="card-title w-100 text-center">Guruhning nomi uchun joy</h5>
-              <div class="row">
-                <div class="col-6  mt-1"><b>O'qituvchi:</b></div>
-                <div class="col-6" style="text-align:right;">Elshod Musurmonov</div>
-                <div class="col-6  mt-1"><b>O'qituvchiga to'lov turi:</b></div>
-                <div class="col-6" style="text-align:right;">Foiz</div>
-                <div class="col-6  mt-1"><b>To'lov Foizi:</b></div>
-                <div class="col-6" style="text-align:right;">50%</div>
-                <div class="col-6  mt-1"><b>O'qituvchiga to'lov:</b></div>
-                <div class="col-6" style="text-align:right;">100 000</div>
-                <div class="col-6  mt-1"><b>O'qituvchiga Bonus:</b></div>
-                <div class="col-6" style="text-align:right;">5 000</div>
-                <div class="col-6  mt-1"><b>Guruh ochildi:</b></div>
-                <div class="col-6" style="text-align:right;">24.07.2024 15:15:15</div>
-                <div class="col-6  mt-1"><b>Guruh yangilandi:</b></div>
-                <div class="col-6" style="text-align:right;">24.07.2024 15:15:15</div>
-              </div>
-            </div>
-        <div class="col-lg-6">      
+            <div class="row">
+                <div class="col-lg-6">      
+                    <h5 class="card-title w-100 text-center">Guruhning nomi uchun joy</h5>
+                    <div class="row">
+                        <div class="col-6  mt-1"><b>O'qituvchi:</b></div>
+                        <div class="col-6" style="text-align:right;">Elshod Musurmonov</div>
+                        <div class="col-6  mt-1"><b>O'qituvchiga to'lov turi:</b></div>
+                        <div class="col-6" style="text-align:right;">Foiz</div>
+                        <div class="col-6  mt-1"><b>To'lov Foizi:</b></div>
+                        <div class="col-6" style="text-align:right;">50%</div>
+                        <div class="col-6  mt-1"><b>O'qituvchiga to'lov:</b></div>
+                        <div class="col-6" style="text-align:right;">100 000</div>
+                        <div class="col-6  mt-1"><b>O'qituvchiga Bonus:</b></div>
+                        <div class="col-6" style="text-align:right;">5 000</div>
+                        <div class="col-6  mt-1"><b>Darslar soni:</b></div>
+                        <div class="col-6" style="text-align:right;">12</div>
+                        <div class="col-6  mt-1"><b>Guruh ochildi:</b></div>
+                        <div class="col-6" style="text-align:right;">24.07.2024 15:15:15</div>
+                    </div>
+                </div>
+            <div class="col-lg-6">      
               <h5 class="card-title w-100 text-center">Guruh narxi: 145 000 so'm</h5>
               <div class="row">
                 <div class="col-6  mt-1"><b>Guruh uchun kurs:</b></div>
@@ -216,6 +217,14 @@
           </div>
         </div>
       </div>
+      
+    <div class="card">
+        <div class="card-body">
+            <div class="progress mt-4">
+                <div class="progress-bar" role="progressbar" style="width: 25%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">25%</div>
+              </div>
+        </div>
+    </div>
       <div class="card">
         <div class="card-body">
           <div class="row">
@@ -273,20 +282,24 @@
           </div>
         </div>
       </div> 
-      <!--Qarzdorlarga SMS--> 
+      <!--Qarzdorlarga SMS +++ --> 
       <div class="modal fade" id="createPaymart" tabindex="-1">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Qarzdorlarga SMS</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title w-100 text-center">Qarzdorlarga SMS yuborish</h5>
             </div>
-            <div class="modal-body">
-              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+            <div class="modal-body p-1">
+              <form action="" method="post">
+                <div class="row">
+                    <div class="col-6">
+                        <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal" aria-label="Close">Bekor qilish</button>
+                    </div>
+                    <div class="col-6">
+                        <button type="submit" class="btn btn-primary w-100">SMS yuborish</button>
+                    </div>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -300,30 +313,58 @@
               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
             <div class="modal-body">
-              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
+                <form action="" method="post">
+                    <label for="" class="my-2">Guruh nomi</label>
+                    <input type="text" required class="form-control">
+                    <label for="" class="my-2">O'qituvchi</label>
+                    <select name="" required class="form-select">
+                        <option value="">Tanlang...</option>
+                    </select>
+                    <label for="" class="my-2">O'qituvchiga to'lov turi</label>
+                    <select name="" required class="form-select">
+                        <option value="">Tanlang...</option>
+                    </select>
+                    <label for="" class="my-2">To'lov foizi</label>
+                    <input type="text" required class="form-control">
+                    <label for="" class="my-2">O'qituvchiga to'lov</label>
+                    <input type="text" required class="form-control">
+                    <label for="" class="my-2">O'qituvchiga bonus</label>
+                    <input type="text" required class="form-control">
+                    <label for="" class="my-2">Guruh uchun kurs</label>
+                    <select name="" required class="form-select">
+                        <option value="">Tanlang...</option>
+                    </select>
+                    <label for="" class="my-2">Guruh narxi</label>
+                    <select name="" required class="form-select">
+                        <option value="">Tanlang...</option>
+                    </select>
+                    <div class="w-100 text-center mt-2">
+                        <button class="btn btn-primary w-50">O'zgarishlarni saqlash</button>
+                    </div>
+                </form>
             </div>
           </div>
         </div>
       </div>
-      <!--Guruhni ochirish-->
+      <!--Guruhni o'chirish +++-->
       <div class="modal fade" id="createChegirma" tabindex="-1">
         <div class="modal-dialog modal-sm">
           <div class="modal-content">
             <div class="modal-header">
-              <h5 class="modal-title">Guruhni ochirish</h5>
-              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              <h5 class="modal-title w-100 text-center">Guruh o'chirilsinmi?</h5>
             </div>
-            <div class="modal-body">
-              Non omnis incidunt qui sed occaecati magni asperiores est mollitia. Soluta at et reprehenderit. Placeat autem numquam et fuga numquam. Tempora in facere consequatur sit dolor ipsum. Consequatur nemo amet incidunt est facilis. Dolorem neque recusandae quo sit molestias sint dignissimos.
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="button" class="btn btn-primary">Save changes</button>
-            </div>
+            <div class="modal-body p-1">
+                <form action="" method="post">
+                  <div class="row">
+                      <div class="col-6">
+                          <button type="button" class="btn btn-danger w-100" data-bs-dismiss="modal" aria-label="Close">Bekor qilish</button>
+                      </div>
+                      <div class="col-6">
+                          <button type="submit" class="btn btn-primary w-100">O'chirish</button>
+                      </div>
+                  </div>
+                </form>
+              </div>
           </div>
         </div>
       </div>
