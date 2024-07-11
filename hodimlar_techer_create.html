@@ -167,7 +167,7 @@
     <section class="section dashboard">
       <div class="row mb-2">
         <div class="col-lg-3">
-          <a href="hodimlar.html" class="btn btn-primary w-100">Hodimlar</a>
+          <a href="hodimlar.html" class="btn btn-secondary w-100">Hodimlar</a>
         </div>
         <div class="col-lg-3">
           <a href="hodimlar_create.html" class="btn btn-secondary w-100">Yangi hodim</a>
@@ -176,77 +176,43 @@
           <a href="hodimlar_techer.html" class="btn btn-secondary w-100">O'qituvchilar</a>
         </div>
         <div class="col-lg-3">
-          <a href="hodimlar_techer_create.html" class="btn btn-secondary w-100">Yangi o'qituvchi</a>
+          <a href="hodimlar_techer_create.html" class="btn btn-primary w-100">Yangi o'qituvchi</a>
         </div>
       </div>
-
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <i class="bi bi-check-circle me-1"></i>
-        Yangi xodim qo'shildi.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-
       
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <i class="bi bi-check-circle me-1"></i>
-        Hodim faoliyati yakunlandi.
+      <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        Login band.
         <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
       </div>
-      
-      <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <i class="bi bi-check-circle me-1"></i>
-        Hodim faoliyati qayta tiklandi.
-        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-      </div>
-
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title w-100 text-center">Hodimlar</h5>
-
-          <table class="table text-center table-bordered" style="font-size: 12px;">
-            <thead>
-              <tr class="align-items-center">
-                <th>#</th>
-                <th>Hodim</th>
-                <th>Login</th>
-                <th>Telefon</th>
-                <th>Faoliyati</th>
-                <th>Status</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Elshod Musurmonov</b></a>
-                </td>
-                <td>elshodatc1116</td>
-                <td>90 883 0450</td>
-                <td><span class="bg-success p-1 text-white">Aktiv</span></td>
-                <td>
-                  <form action="" method="post">
-                    <button class="btn btn-danger p-0 px-1 m-0">Yakunlash</button>
-                  </form>
-                </td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td style="text-align:left;">
-                  <a href="#"><b>Elshod Musurmonov</b></a>
-                </td>
-                <td>elshodatc1116</td>
-                <td>90 883 0450</td>
-                <td><span class="bg-danger p-1 text-white">Yakunlangan</span></td>
-                <td>
-                  <form action="" method="post">
-                    <button class="btn btn-success p-0 px-1 m-0">Aktivlashtirish</button>
-                  </form>
-                </td>
-              </tr>
-              
-            </tbody>
-          </table>
+          <h5 class="card-title w-100 text-center">Yangi o'qituvchi</h5>
+          <form action="">
+            <div class="row">
+              <div class="col-lg-6">
+                <label class="my-2">O'qituvchi FIO</label>
+                <input type="text" class="form-control" required>
+                <label class="my-2">Yashash manzili</label>
+                <select name="" required class="form-select">
+                  <option value=""></option>
+                </select>
+                <label class="my-2">O'qituvchining tug'ilgan kuni</label>
+                <input type="date" class="form-control" required>
+                <label class="my-2">O'qituvchi haqida</label>
+                <textarea name=""  class="form-control" required></textarea>
+              </div>
+              <div class="col-lg-6">
+                <label class="my-2">Telefon raqam</label>
+                <input type="text" required class="form-control">
+                <label class="my-2">Qo'shimcha telefon raqami</label>
+                <input type="text" required class="form-control">
+                <label class="my-2">O'qituvchi uchun login</label>
+                <input type="text" required class="form-control">
+                <button class="btn btn-primary w-100 mt-2">Yangi hodimni saqlash</button>
+              </div>
+            </div>
+          </form>
         </div>
       </div>
     </section>
