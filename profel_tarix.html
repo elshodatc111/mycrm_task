@@ -159,7 +159,7 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Bosh sahifa</a></li>
-          <li class="breadcrumb-item active">Profel</li>
+          <li class="breadcrumb-item active">Qilingan ishlar</li>
         </ol>
       </nav>
     </div>
@@ -167,7 +167,7 @@
     <section class="section dashboard">
       <div class="row mb-2">
         <div class="col-lg-3">
-          <a href="profel.html" class="btn btn-primary w-100">Mening profelim</a>
+          <a href="profel.html" class="btn btn-secondary w-100">Mening profelim</a>
         </div>
         <div class="col-lg-3">
           <a href="profel_new_password.html" class="btn btn-secondary w-100">Parolni yangilash</a>
@@ -176,14 +176,58 @@
           <a href="profel_ish_haqi.html" class="btn btn-secondary w-100">Ish haqi tarixi</a>
         </div>
         <div class="col-lg-3">
-          <a href="profel_tarix.html" class="btn btn-secondary w-100">Qilingan ishlar</a>
+          <a href="profel_tarix.html" class="btn btn-primary w-100">Qilingan ishlar</a>
         </div>
       </div>
 
+
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title w-100 text-center">Mening Profelim</h5>
+          <h5 class="card-title w-100 text-center">Qilingan ishlar tarixi</h5>
 
+          <table class="table text-center table-bordered" style="font-size: 12px;">
+            <thead>
+              <tr class="align-items-center">
+                <th>#</th>
+                <th>Hodim</th>
+                <th>Login</th>
+                <th>Telefon</th>
+                <th>Faoliyati</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td style="text-align:left;">
+                  <a href="#"><b>Elshod Musurmonov</b></a>
+                </td>
+                <td>elshodatc1116</td>
+                <td>90 883 0450</td>
+                <td><span class="bg-success p-1 text-white">Aktiv</span></td>
+                <td>
+                  <form action="" method="post">
+                    <button class="btn btn-danger p-0 px-1 m-0">Yakunlash</button>
+                  </form>
+                </td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td style="text-align:left;">
+                  <a href="#"><b>Elshod Musurmonov</b></a>
+                </td>
+                <td>elshodatc1116</td>
+                <td>90 883 0450</td>
+                <td><span class="bg-danger p-1 text-white">Yakunlangan</span></td>
+                <td>
+                  <form action="" method="post">
+                    <button class="btn btn-success p-0 px-1 m-0">Aktivlashtirish</button>
+                  </form>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
         </div>
       </div>
     </section>
