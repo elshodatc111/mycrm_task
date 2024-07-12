@@ -19,6 +19,15 @@
   <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
   <link href="assets/vendor/simple-datatables/style.css" rel="stylesheet">
   <link href="assets/css/style.css" rel="stylesheet">
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+      .chart-container {display: flex;justify-content: center;align-items: center;height: 500px;}
+      .funnel-label {font-size: 14px;font-weight: bold;fill: #333;}
+      .funnel-stilt {stroke: #666;stroke-width: 2;stroke-dasharray: 4, 2;}
+      .funnel-segment {cursor: pointer;transition: fill 0.2s;}
+      .funnel-segment:hover {fill: #ff5733 !important;}
+      @media (max-width: 767px) {.chart-container {height: 300px;}.funnel-label {font-size: 12px;}}
+  </style>
 </head>
 
 <body>
@@ -166,25 +175,29 @@
 
     <section class="section dashboard">
       <div class="row mb-2">
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="statick.html" class="btn btn-primary w-100">Varonka</a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="statick_kun.html" class="btn btn-secondary w-100">Kunlik Statistika</a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="statick_oy.html" class="btn btn-secondary w-100">Oylik Statistika</a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="statick_activ.html" class="btn btn-secondary w-100">Aktiv Statistika</a>
         </div>
       </div>
 
 
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title w-100 text-center">Varonka</h5>
-
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h2 class="card-title text-center">Form orqali talabalardan murojat(30 kun)</h2>
+          <div id="funnelChart1" class="chart-container"></div>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <h2 class="card-title  text-center">Form orqali o'qituvchilardan murojat(30 kun)</h2>
+          <div id="funnelChart2" class="chart-container"></div>
         </div>
       </div>
 
@@ -240,5 +253,96 @@
   <script src="assets/vendor/tinymce/tinymce.min.js"></script>
   <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const data1 = [
+            { stage: 'Form', value: 100 },
+            { stage: 'Regis', value: 80 },
+            { stage: 'Guruh', value: 70 },
+            { stage: 'To\'lov', value: 50 },
+        ];
+        const data2 = [
+            { stage: 'Form', value: 100 },
+            { stage: 'Regis', value: 80 },
+            { stage: 'Guruh', value: 70 },
+            { stage: 'To\'lov', value: 50 },
+        ];
+        const createFunnelChart = (containerId, data) => {
+            const container = d3.select(containerId);
+            const containerWidth = container.node().getBoundingClientRect().width;
+            const width = containerWidth;
+            const height = 500;
+            const chartWidth = width * 0.6;
+            const chartHeight = 300;
+            const svg = container.append("svg")
+                .attr("width", width)
+                .attr("height", height);
+            const x = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.value)])
+                .range([0, chartWidth]);
+            const y = d3.scaleBand()
+                .domain(data.map(d => d.stage))
+                .range([0, chartHeight])
+                .padding(0.1);
+            const colors = d3.scaleOrdinal(d3.schemeCategory10);
+            const funnelLayer = svg.append("g")
+                .attr("transform", `translate(${(width - chartWidth) / 2}, ${(height - chartHeight) / 2})`);
+            funnelLayer.selectAll(".funnel-segment")
+                .data(data)
+                .enter()
+                .append("path")
+                .attr("class", "funnel-segment")
+                .attr("d", (d, i) => {
+                    const topWidth = x(d.value);
+                    const bottomWidth = i < data.length - 2 ? x(data[i + 1].value) : topWidth;
+                    const yPos = y(d.stage);
+                    if (i === data.length - 1) {
+                    return `
+                        M ${(chartWidth - topWidth) / 2} ${yPos}
+                        L ${(chartWidth + topWidth) / 2} ${yPos}
+                        L ${(chartWidth + topWidth) / 2} ${yPos + y.bandwidth()}
+                        L ${(chartWidth - topWidth) / 2} ${yPos + y.bandwidth()}
+                        Z
+                    `;
+                    } else {
+                    return `
+                        M ${(chartWidth - topWidth) / 2} ${yPos}
+                        L ${(chartWidth + topWidth) / 2} ${yPos}
+                        L ${(chartWidth + bottomWidth) / 2} ${yPos + y.bandwidth()}
+                        L ${(chartWidth - bottomWidth) / 2} ${yPos + y.bandwidth()}
+                        Z
+                    `;
+                    }
+                })
+                .attr("fill", (d, i) => colors(i));
+                funnelLayer.selectAll(".funnel-label")
+                    .data(data)
+                    .enter()
+                    .append("text")
+                    .attr("class", "funnel-label")
+                    .attr("x", chartWidth + 20)
+                    .attr("y", d => y(d.stage) + y.bandwidth() / 2)
+                    .attr("dy", ".35em")
+                    .attr("text-anchor", "start")
+                    .text(d => `${d.stage}: ${d.value}`);
+                funnelLayer.selectAll(".funnel-stilt")
+                    .data(data)
+                    .enter()
+                    .append("line")
+                    .attr("class", "funnel-stilt")
+                    .attr("x1", chartWidth + 10)
+                    .attr("y1", d => y(d.stage) + y.bandwidth() / 2)
+                    .attr("x2", d => (chartWidth + x(d.value)) / 2)
+                    .attr("y2", d => y(d.stage) + y.bandwidth() / 2);
+                }
+                createFunnelChart("#funnelChart1", data1);
+                createFunnelChart("#funnelChart2", data2);
+                window.addEventListener('resize', () => {
+                    d3.selectAll("svg").remove();
+                    createFunnelChart("#funnelChart1", data1);
+                    createFunnelChart("#funnelChart2", data2);
+                });
+        });
+</script>
 </body>
 </html>

@@ -159,33 +159,111 @@
       <nav>
         <ol class="breadcrumb">
           <li class="breadcrumb-item"><a href="index.html">Bosh sahifa</a></li>
-          <li class="breadcrumb-item active">Sozlamalar</li>
+          <li class="breadcrumb-item active">SMS sozlamalari</li>
         </ol>
       </nav>
     </div>
 
     <section class="section dashboard">
       <div class="row mb-2">
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="settings.html" class="btn btn-secondary w-100">Xonalar</a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="settings_tolov.html" class="btn btn-secondary w-100">To'lovlar</a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="settings_cours.html" class="btn btn-secondary w-100">Kurslar</a>
         </div>
-        <div class="col-lg-3">
+        <div class="col-lg-3 mt-lg-0 mt-2">
           <a href="settings_sms.html" class="btn btn-primary w-100">SMS</a>
         </div>
       </div>
 
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title w-100 text-center">SMS Sozlamalar</h5>
-
-
-          
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="card" style="min-height:220px">
+            <div class="card-body">
+              <h5 class="card-title w-100 text-center">SMS statistikasi</h5>
+              <div class="row">
+                <div class="col-6">
+                  <h5 class="w-100 text-center">Yuborilgan SMSlar</h5>
+                  <h3 class="w-100 text-center">15 000</h3>
+                </div>
+                <div class="col-6">
+                  <h5 class="w-100 text-center">SMS uchun to'lovlar</h5>
+                  <h3 class="w-100 text-center">15 000</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="card" style="min-height:220px">
+            <div class="card-body">
+              <h5 class="card-title w-100 text-center">SMS Sozlamalar</h5>
+              <form action="" method="post">
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Yangi tashriflar uchun sms yuborish</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">Tug'ilgan kunlar uchun sms yuborish</label>
+                </div>
+                <div class="form-check form-switch">
+                  <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" checked>
+                  <label class="form-check-label" for="flexSwitchCheckChecked">To'lovlar uchun sms yuborish</label>
+                </div>
+                <button class="btn btn-primary mt-2 w-100">O'zgarishlarni saqlash</button>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-12">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title w-100 text-center">Xarid qilingan SMS paketlari</h5>
+              <div class="table-responsive">
+                <table class="table text-center table-bordered" style="font-size: 12px;">
+                  <thead>
+                    <tr class="align-items-center">
+                      <th>#</th>
+                      <th>SMS paket</th>
+                      <th>To'lov summasi</th>
+                      <th>Sotib olingan vaqt</th>
+                      <th>Paket haqida</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>1</td>
+                      <td>250</td>
+                      <td>15 000</td>
+                      <td>10.07.2024 15:24:45</td>
+                      <td>Paket haqida comment</td>
+                    </tr>
+                    <tr>
+                      <td>2</td>
+                      <td>250</td>
+                      <td>15 000</td>
+                      <td>10.07.2024 15:24:45</td>
+                      <td>Paket haqida comment</td>
+                    </tr>
+                    <tr>
+                      <td>3</td>
+                      <td>250</td>
+                      <td>15 000</td>
+                      <td>10.07.2024 15:24:45</td>
+                      <td>Paket haqida comment</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+    
+              
+            </div>
+          </div>
         </div>
       </div>
     </section>
