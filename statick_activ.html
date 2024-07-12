@@ -183,8 +183,32 @@
 
       <div class="card">
         <div class="card-body">
-          <h5 class="card-title w-100 text-center">Aktiv</h5>
-
+          <h5 class="card-title w-100 text-center">Aktiv talabalar</h5>
+          <canvas id="lineChart" style="max-height: 400px;"></canvas>
+          <script>
+            document.addEventListener("DOMContentLoaded", () => {
+              new Chart(document.querySelector('#lineChart'), {
+                type: 'line',
+                data: {
+                  labels: ['Mart-2024', 'Aprel-2024', 'Iyun-2024', 'Iyul-2024', 'Avgust-2024', 'Sentyabr-2024', 'Oktyabr-2024'],
+                  datasets: [{
+                    label: 'Aktiv talabalar',
+                    data: [65, 59, 80, 81, 56, 55, 40],
+                    fill: false,
+                    borderColor: 'rgb(75, 192, 192)',
+                    tension: 0.1
+                  }]
+                },
+                options: {
+                  scales: {
+                    y: {
+                      beginAtZero: true
+                    }
+                  }
+                }
+              });
+            });
+          </script>
         </div>
       </div>
     </section>
