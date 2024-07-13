@@ -176,7 +176,7 @@
           <a href="report_moliya.html" class="btn btn-primary w-100">Moliya</a>
         </div>
         <div class="col-lg-3 mt-lg-0 mt-2">
-          <a href="report_tarix.html" class="btn btn-secondary w-100">Hodimlar tarixi</a>
+          <a href="report_activ.html" class="btn btn-secondary w-100">Aktiv talabalar</a>
         </div>
       </div>
 
@@ -184,7 +184,81 @@
       <div class="card">
         <div class="card-body">
           <h5 class="card-title w-100 text-center">Moliya</h5>
+          <form action="" method="post">
+            <div class="row">
+              <div class="col-8">
+                <select name="" required class="form-select">
+                  <option value="">Barcha to'lovlar</option>
+                  <option value="">Naqt to'lovlar</option>
+                  <option value="">Plastik to'lovlar</option>
+                  <option value="">Payme to'lovlar</option>
+                  <option value="">Qaytarilgan to'lovlar</option>
+                  <option value="">Chegirmalar to'lovlar</option>
+                  <option value="">Kassadan xarajatlar</option>
+                  <option value="">Kassadan chiqimlar</option>
+                  <option value="">Balansdan xarajatlar</option>
+                  <option value="">Balansdan chiqimlar</option>
+                  <option value="">Ish haqi balansdan kassaga</option>
+                  <option value="">Ish haqi kassadan balansga</option>
+                  <option value="">Barcha to'langan ish haqlari</option>
+                </select>
+              </div>
+              <div class="col-4">
+                <button type="submit" class="btn btn-warning w-100">Qidruv</button>
+              </div>
+            </div>
+          </form>
+          
+          <div class="w-100 text-center my-3">
+            <button class="btn btn-outline-info"><i class="bi bi-cloud-download"></i> print excel</button>
+          </div>
 
+          <div class="table-responsive">
+            <table class="table text-center table-bordered" style="font-size: 12px;">
+              <thead>
+                <tr class="align-items-center">
+                  <th>#</th>
+                  <th>Guruh</th>
+                  <th>Boshlanish vaqti</th>
+                  <th>Yakunlanish vaqti</th>
+                  <th>Talabalar</th>
+                  <th>Guruh holati</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td style="text-align:left;">
+                    <a href="#"><b>Elshod Musurmonov</b></a>
+                  </td>
+                  <td>99 890 88 55</td>
+                  <td>Qarshi shaxar</td>
+                  <td>3</td>
+                  <td>10.07.2024 15:24:45</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td style="text-align:left;">
+                    <a href="#"><b>Elshod Musurmonov</b></a>
+                  </td>
+                  <td>99 890 88 55</td>
+                  <td>Qarshi shaxar</td>
+                  <td>3</td>
+                  <td>10.07.2024 15:24:45</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td style="text-align:left;">
+                    <a href="#"><b>Elshod Musurmonov</b></a>
+                  </td>
+                  <td>99 890 88 55</td>
+                  <td>Qarshi shaxar</td>
+                  <td>3</td>
+                  <td>10.07.2024 15:24:45</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
           
         </div>
       </div>
